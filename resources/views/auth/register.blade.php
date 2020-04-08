@@ -191,6 +191,7 @@
                     @csrf
                     <div class="header">
                         <h1 class="heading">Register</h1>
+                        <p>Already a member? <a href="{{route('login')}}">Sign In</a></p>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6">
@@ -240,6 +241,7 @@
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Register') }}
                             </button>
+                            
                         </div>
                     </div>
                 </form>
