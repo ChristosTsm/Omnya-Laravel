@@ -1,8 +1,129 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+// Helpers
+span {
+    color: $red;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    transition: 250ms;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: $red;
+}
+
+.btn-primary {
+    background-color: $red !important;
+    outline: none;
+    border: none;
+    transition: 250ms;
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.8);
+    }
+}
+
+// end helpers
+
+// Navbar
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 250ms;
+    z-index: 999;
+}
+
+.scrolled-nav {
+    padding: 10px 20px;
+    background: #444;
+    a {
+        color: #fff;
+        &:hover {
+            color: $red;
+        }
+    }
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #333;
+}
+
+.navlinks,
+.navlinks ul {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-m;
+    li:nth-child(even) {
+        margin: 0 15px;
+    }
+}
+
+#logo {
+    font-size: $font-size-l;
+}
+
+// end Navbar
+
+// header
+
+.header-img {
+    img {
+        width: 450px;
+        height: 500px;
+        vertical-align: top;
+    }
+}
+
+header {
+    margin-top: 100px;
+}
+// end header
+.icon {
+    color: $red;
+    font-size: 48px;
+}
+
+.secondary-bg {
+    background-color: $red;
+
+    &-text {
+        color: #fff;
+    }
+}
+
+footer {
+    background: #333;
+    color: #fff;
+
+    a,
+    h5 {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    a:hover {
+        color: #fff;
+    }
+}
