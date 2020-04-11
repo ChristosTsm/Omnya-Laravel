@@ -85,7 +85,7 @@
        <!-- Styles -->
         <style>
             :root {
-                --link-color: #3490dc;
+                --link-color: #eb0040;
             }
 
             html, body {
@@ -123,21 +123,14 @@
                 text-transform: uppercase;
             }
 
-            .m-b-md {
-                margin-bottom: 30px;
+            .text-center {
+                text-align: center;
             }
 
             .login-form {
                 display: flex;
-                flex-direction: row;
-            }
-            .login-img {
-                background-image: url('https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 50vw;
-                height: 100vh;
+                flex-direction: column;
+                transform: translateY(-50%);
             }
             .form {
                 display: flex;
@@ -179,9 +172,9 @@
         </style>
     </head>
     <body>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#eb0040" fill-opacity="1" d="M0,96L40,96C80,96,160,96,240,101.3C320,107,400,117,480,106.7C560,96,640,64,720,48C800,32,880,32,960,48C1040,64,1120,96,1200,96C1280,96,1360,64,1400,48L1440,32L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
         <div class="content">
             <div class="login-form">
-                <div class="login-img"></div>
                 <form method="POST" action="{{ route('login') }}" class="flex-center form">
                     @csrf
                     <div class="header">
@@ -189,10 +182,11 @@
                         <p>New to OMNYA? <a href="{{route('register')}}">Sign Up</a></p>
                     </div>
                     <div class="form-group row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 text-center">
                             <input placeholder="{{ __('E-Mail Address') }}" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                             @error('email')
+                            <br>
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -201,10 +195,11 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 text-center">
                             <input placeholder="{{ __('Password') }}" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                             @error('password')
+                            <br>
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
