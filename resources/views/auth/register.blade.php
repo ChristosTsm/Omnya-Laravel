@@ -84,7 +84,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Omnya - Business Management System</title>
-
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/0e69954788.js" crossorigin="anonymous"></script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
        <!-- Styles -->
@@ -177,6 +178,9 @@
                 font-weight: 300;
                 font-size: 0.8rem;
             }
+            .w-100 {
+                width: 100%;
+            }
         </style>
     </head>
     <body>
@@ -244,6 +248,9 @@
                             </button>
                             
                         </div>
+                    </div>
+                    <div class="w-100">
+                        <a href="/"><i class="fas fa-long-arrow-alt-left"></i></a>
                     </div>
                 </form>
             </div>
