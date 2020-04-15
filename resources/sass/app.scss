@@ -127,3 +127,108 @@ footer {
         color: #fff;
     }
 }
+
+// Dashboard
+.dashboard-bg {
+    background-color: #f0f0f0;
+}
+
+.dashboard-menu {
+    height: 100%;
+    width: 200px;
+    border-right: 1px solid $gray-white;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: #2b3e4e;
+    box-shadow: 2px 0px 15px -4px rgba(0, 0, 0, 0.15);
+    ul {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    a,
+    p,
+    li {
+        color: #fff;
+        font-size: $font-size-m;
+    }
+}
+
+.dashboard-item {
+    padding: 0 15px;
+    margin: 35px 0 !important;
+}
+
+.dashboard-header {
+    padding-top: 25px;
+    text-align: center;
+    p {
+        letter-spacing: 5px;
+    }
+}
+
+.margin-left {
+    margin-left: 200px;
+}
+
+.divisioner {
+    border-color: rgba($color: #fff, $alpha: 0.5);
+    width: 80%;
+}
+
+.overview-card {
+    background: #fff;
+    box-shadow: -5px -5px 15px rgba($color: #fff, $alpha: 0.8),
+        5px 5px 10px rgba($color: #000, $alpha: 0.1);
+    border-radius: 5px;
+    padding: 18px 15px;
+    h3 {
+        font-size: 28px;
+        font-weight: 300;
+        // margin: 0 !important;
+        display: inline-block;
+        border-bottom: 3px solid #2b3e4e;
+    }
+}
+
+.input-search {
+    width: 70%;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.4);
+    input {
+        padding: 8px 10px;
+        border: none;
+        outline: none;
+        width: 80%;
+        background: #f0f0f0;
+    }
+    i {
+        color: #444;
+    }
+}
+
+.username {
+    margin: 0 !important;
+    padding: 0 !important;
+    align-self: center;
+}
+
+label {
+    margin-bottom: 0 !important;
+}
+
+.li-header {
+    margin: 0 !important;
+}
+
+.success {
+    color: $green;
+}
+
+.on-progress {
+    color: $orange;
+}
+
+.danger {
+    color: $red;
+}

@@ -2,20 +2,69 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <div class="row justify-content-start my-5">
+        <div class="overview-card col-sm-4 mx-3">
+            <h3>Assign new task</h3>
+            <form action="#" class="dashboard-form d-flex flex-column">
+                <label for="employees">To</label>
+                <select name="employees" id="employees" class="mb-3">
+                    <option value="">--Please select an employee--</option>
+                    <option value="James Johnson">James Johnson</option>
+                    <option value="Mary Popkins">Mary Popkins</option>
+                    <option value="Harry Don">Harry Don</option>
+                    <option value="Conor Maley">Conor Maley</option>
+                    <option value="Steff Williams">Steff Williams</option>
+                </select>
+                <textarea class="mb-3" placeholder="Task Description" name="job-description" id="job-description" cols="35" rows="5">
+                </textarea>
+                <label for="deadline">Deadline</label>
+                <input type="date" name="deadline" id="deadline" class="mb-3">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="overview-card col-sm-7">
+            <h3>Tasks Overview</h3>
+            <section class="pt-3 row justify-content-between">
+                <ul class="col-sm-4 mb-5">
+                    <li><h5 class="li-header">Mary Hopkins</h5></li>
+                    <li><i class="success fas fa-check-circle"></i> Completed: 35</li>
+                    <li><i class="on-progress fas fa-spinner"></i> On Progress: 7</li>
+                    <li><i class="danger fas fa-times-circle"></i> Missed Deadline: 3</li>
+                </ul>
+                <ul class="col-sm-4 mb-5">
+                    <li><h5 class="li-header">Harry Don</h5></li>
+                    <li><i class="success fas fa-check-circle"></i> Completed: 28</li>
+                    <li><i class="on-progress fas fa-spinner"></i> On Progress: 1</li>
+                    <li><i class="danger fas fa-times-circle"></i> Missed Deadline: 3</li>
+                </ul>
+                <ul class="col-sm-4 mb-5">
+                    <li><h5 class="li-header">Conor Malley</h5></li>
+                    <li><i class="success fas fa-check-circle"></i> Completed: 20</li>
+                    <li><i class="on-progress fas fa-spinner"></i> On Progress: 3</li>
+                    <li><i class="danger fas fa-times-circle"></i> Missed Deadline: 1</li>
+                </ul>
+                <ul class="col-sm-4 mb-5">
+                    <li><h5 class="li-header">Steff Williams</h5></li>
+                    <li><i class="success fas fa-check-circle"></i> Completed: 13</li>
+                    <li><i class="on-progress fas fa-spinner"></i> On Progress: 4</li>
+                    <li><i class="danger fas fa-times-circle"></i> Missed Deadline: 4</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="row justify-content-start">
+        <div class="container">
+            <div class="col-sm-6 overview-card">
+                <h3>Employee List & Details</h3>
+                @if ($employees->count() > 0)
+                    @foreach ($employees as $employee)
+                        <p>{{$employee->fullName}}</p>  
+                    @endforeach
+                @else 
+                        <p>No Employees Yet</p>
+                @endif
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+                <a href="/employees">Manage Employees</a>
             </div>
         </div>
     </div>

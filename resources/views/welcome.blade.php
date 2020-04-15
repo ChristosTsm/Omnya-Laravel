@@ -14,7 +14,10 @@
         <!-- FontAwesome -->
         <script src="https://kit.fontawesome.com/0e69954788.js" crossorigin="anonymous"></script>
     <body>
-        <nav id="navbar">
+        <div class="popup" style="text-align:center; background:red; color: #fff; position:sticky; top:0; width:100; z-index:9999">
+            <p>Web App is currently on development</p>
+        </div>
+        <nav id="navbar" class="pt-4"> <!-- CHANGE PT-4 AFTER REMOVING POP UP ABOVE -->
             <div class="navlinks">
                 <a href="/" id="logo"><span><i class="fas fa-rocket"></i></span> OMN<span>Y</span>A</a>
                 <ul>
@@ -59,7 +62,7 @@
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-sm-6 header-img">
-                      <img src="https://logobly.com/wp-content/uploads/logobly_hero_image_illustration_07.png" alt="Business Management">  
+                        <img src="{{asset('assets/heroimg.jpg')}}" alt="Business Management">  
                     </div>
                     <div class="col-sm-6">
                         <div class="header-intro">
@@ -103,7 +106,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 header-img text-center">
-                        <img src="https://logobly.com/wp-content/uploads/logobly_hero_image_illustration_06.png" alt="Manage your business">
+                        <img src="{{asset('assets/sectionimg.png')}}" alt="Manage your business">
                     </div>
                 </div>
             </div>
@@ -120,7 +123,7 @@
             </svg>
             <div class="text-center my-5">
               <h1>Want more?<br>Feel free to contact us, we are open to suggestions & improvement</h1>
-              <a href="#">Contact Us</a>
+              <a class="btn btn-primary" href="mailto:christosgsd@gmail.com">Contact Us</a>
             </div>
         </section>
         <footer class="py-5">
