@@ -127,6 +127,6 @@ class EmployeeController extends Controller
     {
         $employee = Employee::find($id);
         $employee->delete();
-        return redirect('/employees');
+        return redirect('/employees')->with('success','Employee Deleted');
     }
 }

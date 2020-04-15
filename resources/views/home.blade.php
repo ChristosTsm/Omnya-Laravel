@@ -25,30 +25,18 @@
         <div class="overview-card col-sm-7">
             <h3>Tasks Overview</h3>
             <section class="pt-3 row justify-content-between">
-                <ul class="col-sm-4 mb-5">
-                    <li><h5 class="li-header">Mary Hopkins</h5></li>
-                    <li><i class="success fas fa-check-circle"></i> Completed: 35</li>
-                    <li><i class="on-progress fas fa-spinner"></i> On Progress: 7</li>
-                    <li><i class="danger fas fa-times-circle"></i> Missed Deadline: 3</li>
-                </ul>
-                <ul class="col-sm-4 mb-5">
-                    <li><h5 class="li-header">Harry Don</h5></li>
-                    <li><i class="success fas fa-check-circle"></i> Completed: 28</li>
-                    <li><i class="on-progress fas fa-spinner"></i> On Progress: 1</li>
-                    <li><i class="danger fas fa-times-circle"></i> Missed Deadline: 3</li>
-                </ul>
-                <ul class="col-sm-4 mb-5">
-                    <li><h5 class="li-header">Conor Malley</h5></li>
-                    <li><i class="success fas fa-check-circle"></i> Completed: 20</li>
-                    <li><i class="on-progress fas fa-spinner"></i> On Progress: 3</li>
-                    <li><i class="danger fas fa-times-circle"></i> Missed Deadline: 1</li>
-                </ul>
-                <ul class="col-sm-4 mb-5">
-                    <li><h5 class="li-header">Steff Williams</h5></li>
-                    <li><i class="success fas fa-check-circle"></i> Completed: 13</li>
-                    <li><i class="on-progress fas fa-spinner"></i> On Progress: 4</li>
-                    <li><i class="danger fas fa-times-circle"></i> Missed Deadline: 4</li>
-                </ul>
+                @if ($employees->count() > 0)
+                    @foreach ($employees as $employee)
+                    <ul class="col-sm-4 mb-5">
+                        <li><h5 class="li-header">{{$employee->fullName}}</h5></li>
+                        <li><i class="success fas fa-check-circle"></i> Completed: {{$employee->completedTasks}}</li>
+                        <li><i class="on-progress fas fa-spinner"></i> On Progress: {{$employee->onProgressTasks}}</li>
+                        <li><i class="danger fas fa-times-circle"></i> Missed Deadline: {{$employee->missedDeadline}}</li>
+                    </ul> 
+                    @endforeach
+                @else 
+                        <p>No Tasks Yet</p>
+                @endif
             </section>
         </div>
     </div>
@@ -58,12 +46,17 @@
                 <h3>Employee List & Details</h3>
                 @if ($employees->count() > 0)
                     @foreach ($employees as $employee)
-                        <p>{{$employee->fullName}}</p>  
+                        <div class="py-5">
+                            <h5>Fullname: {{$employee->fullName}}</h5>
+                            <p>Contact: <a href="mailto:{{$employee->email}}">{{$employee->email}}</a><br>
+                            Role: {{$employee->role}}</p>
+                        </div>
+                       
                     @endforeach
                 @else 
                         <p>No Employees Yet</p>
                 @endif
-
+                <hr>
                 <a href="/employees">Manage Employees</a>
             </div>
         </div>

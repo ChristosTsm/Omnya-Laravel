@@ -21,15 +21,15 @@
                     <h5>Contact</h5>
                     <a href="mailto:{{$employee->email}}">{{$employee->email}}</a>
                   </div>
-                  <div class="icons">
+                  <div class="icons d-flex">
                     <a href="/employees/{{$employee->id}}/edit"><i class="fas fa-edit"></i></a>
-                    <a href="#"  
+                    {{-- <a href="#"  
                     onclick="event.preventDefault();
-                    document.getElementById('employee-delete').submit();"><i class="fas fa-trash-alt"></i></a>
-                    <form hidden id="employee-delete" action="/employees/{{$employee->id}}" method="POST" class="mx-auto">
+                    document.getElementById('employee-delete').submit();"><i class="fas fa-trash-alt"></i></a> --}}
+                    <form id="employee-delete" action="/employees/{{$employee->id}}" method="POST" class="mx-auto">
                       @csrf
                       @method('DELETE')
-                      <input type="submit" value="Delete Employee" class="delete-post-btn">
+                      <button class="btn-delete" type="submit"><i class="fas fa-trash-alt"></i></button>
                     </form>
                   </div>
                 </div>
