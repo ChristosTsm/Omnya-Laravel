@@ -35,8 +35,9 @@
                 <li class="dashboard-item"><a href="/employees"><i class="fas fa-users"></i> Employees</a></li>
                 <li class="dashboard-item"><a href="#"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
                 <li class="dashboard-item"><a href="#"><i class="fas fa-check-circle"></i> Tasks</a></li>
-                <li class="dashboard-item"><a href="#"><i class="fas fa-chart-pie"></i> Reports</a></li>
+                <li class="dashboard-item"><a href="#"><i class="fas fa-chart-pie"></i> Charts</a></li>
                 <li class="dashboard-item"><a href="#"><i class="fas fa-file-invoice"></i> Invoicing</a></li>
+                <li class="dashboard-item"><a href="/clients"><i class="fas fa-address-book"></i> Clients</a></li>
             </ul>
             <hr class="divisioner">
             <ul>

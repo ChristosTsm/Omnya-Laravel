@@ -122,3 +122,18 @@ label {
 .btn-delete:hover {
     color: #eb0040;
 }
+
+.client-project img {
+    width: 25px;
+}
+
+.client-project p {
+    margin-right: 10px;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.client-project-details h5 {
+    display: inline-block;
+    border-bottom: 2px solid #eb0040;
+}

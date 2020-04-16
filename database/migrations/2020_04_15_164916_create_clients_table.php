@@ -16,8 +16,8 @@ class CreateClientsTable extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->string('clientName');
-            $table->boolean('paidOff');
-            $table->boolean('serviceOffered');
+            $table->boolean('paidOff')->default(false);
+            $table->boolean('serviceOffered')->default(false);
             $table->string('clientMail');
             $table->text('notes');
             $table->timestamps();

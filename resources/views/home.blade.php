@@ -22,6 +22,7 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
+        @include('includes.messages')
         <div class="overview-card col-sm-7">
             <h3>Tasks Overview</h3>
             <section class="pt-3 row justify-content-between">
