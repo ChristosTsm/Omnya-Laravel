@@ -3,7 +3,8 @@
 @section('content')
   <div class="container">
     <h3>Add Client</h3>
-    <a href="/employees">Back</a>
+    <a href="/clients">Client List</a><span> | </span>
+    <a href="/home">Dashboard</a>
     <div class="row py-5">
       <div class="col-sm-6">
         @include('includes.messages')

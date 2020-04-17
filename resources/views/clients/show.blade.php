@@ -14,7 +14,7 @@
         <h5>Project Progress</h5>
         <div class="d-flex client-project align-items-center justify-content-center">
           @if ($client->serviceOffered == false)
-            <p>On Progress..</p>
+            <p>On Progress</p>
             <img src="{{asset('assets/onprogress.svg')}}" alt="project on progress">
           @else 
             <p>Completed</p>
@@ -26,7 +26,7 @@
         <h5>Payment Status</h5>
         <div class="d-flex client-project align-items-center justify-content-center">
         @if ($client->paidOff == false)
-            <p>On Hold.</p>
+            <p>On Hold</p>
             <img src="{{asset('assets/onprogress.svg')}}" alt="project on progress">
           @else 
             <p>Charged</p>

@@ -21,7 +21,7 @@ class EmployeeController extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('employees.index')->with('employees',$user->employees);;
+        return view('employees.index')->with('employees',$user->employees);
     }
 
     /**

@@ -137,3 +137,19 @@ label {
     display: inline-block;
     border-bottom: 2px solid #eb0040;
 }
+
+.add-icon {
+    font-size: 1.5rem;
+    color: #eb0040;
+    transition: 250ms;
+    width: 25px;
+}
+
+.add-icon:hover {
+    transform: scale(1.2);
+}
+
+.fa-icon {
+    width: 20px;
+    height: 20px;
+}

@@ -44,4 +44,8 @@ class User extends Authenticatable
     public function clients() {
         return $this->hasMany(Client::class);
     }
+
+    public function tasks() {
+        return $this->hasMany(Task::class);
+    }
 }

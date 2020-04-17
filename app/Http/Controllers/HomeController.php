@@ -26,6 +26,6 @@ class HomeController extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('home')->with('employees',$user->employees);
+        return view('home')->with('employees',$user->employees)->with('clients',$user->clients)->with('tasks',$user->tasks);
     }
 }

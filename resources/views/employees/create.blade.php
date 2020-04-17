@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="container">
+  <div class="container text-center">
     <h3>Add Employee</h3>
-    <a href="/employees">Back</a>
-    <div class="row py-5">
+    <a href="/employees">Employee List</a><span> | </span>
+    <a href="/home">Dashboard</a>
+    <div class="row py-5 justify-content-center">
       <div class="col-sm-6">
         @include('includes.messages')
         <form action="/employees" class="dashboard-form d-flex flex-column overview-card" method="POST">

@@ -3,7 +3,11 @@
 @section('content')
   <div class="container">
     <h3>Clients Management</h3>
-    <a href="/clients/create">Add Client</a>
+    <a href="/clients/create">Add Client</a><span> | </span>
+    <a href="/home">Dashboard</a>
+    <div class="my-2">
+      @include('includes.messages')
+    </div>
     <div class="row py-5">
         @if ($clients->count() > 0)
             @foreach ($clients as $client)
@@ -24,7 +28,7 @@
                       <div class="d-flex client-project">
                         @if ($client->paidOff == false)
                           <img src="{{asset('assets/onprogress.svg')}}" alt="project on progress">
-                          <p class="pt-1">Payment on hold</p>
+                          <p class="pt-1">Payment On Hold</p>
                         @else 
                           <i style="color:green; line-height: 1.2; margin-right:2px;" class="fas fa-clipboard-check"></i>
                           <p>Payment Completed</p>
@@ -36,12 +40,6 @@
                     <h5>Project Summary</h5>
                     <p>{{$client->notes}}</p>
                   </div>
-                  
-                  {{-- <ul class="mb-5">
-                  <li><i class="success fas fa-check-circle"></i> Paid Off: {{$client->paidOff}}</li>
-                    <li><i class="on-progress fas fa-spinner"></i> Service Offered: {{$client->serviceOffered}}</li>
-                    <li><i class="danger fas fa-times-circle"></i> Project Summary: {{$client->notes}}</li>
-                  </ul> --}}
                 <div class="d-flex justify-content-between">
                   <div>
                     <h5>Contact</h5>
